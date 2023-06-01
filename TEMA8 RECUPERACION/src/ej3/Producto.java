@@ -4,7 +4,7 @@ package ej3;
  * 
  * @author enieves esta clase muestra
  */
-public class Producto implements Comparable{
+public class Producto implements Comparable<Producto>{
 	protected String nombre = "";
 	protected double precio = 0;
 
@@ -80,11 +80,11 @@ public class Producto implements Comparable{
 	
 
 	@Override
-	public int compareTo(Object o) {
+	public int compareTo(Producto o) {
 		
 		
 		
-		return 0;
+		return nombre.compareTo(o.nombre);
 	}
 
 }
