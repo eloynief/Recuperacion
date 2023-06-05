@@ -87,37 +87,12 @@ public class Main {
 			
 			case 3:{
 				System.out.println("introduce el nombre: ");
-				System.out.println("introduce el precio: ");
 				nombre=sc.next();
 				sc.nextLine();
-				precio=sc.nextDouble();
-				sc.nextLine();
 				
-				System.out.println("introduce el tipo: ");
-				tipoProd=sc.nextLine();
+				producto=new Producto(nombre);
 				
-				//si el producto es perecedero
-				if(tipoProd.equals("Perecedero")) {
-					//
-					caducar=sc.nextInt();
-					//
-					producto=new Perecedero(nombre,precio,caducar);
-					
-				}
-	
-				//si el producto no es perecedero
-				else if(tipoProd.equals("No perecedero")) {
-	
-					//
-					producto=new NoPerecedero(nombre,precio,tipo);
-					
-					
-				}
-				else {
-					System.out.println("Tipo no valido");
-				}
-				
-				productos.remove(tipoProd);
+				productos.remove(producto);
 				
 				break;
 			}//c3

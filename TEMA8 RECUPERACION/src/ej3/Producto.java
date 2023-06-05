@@ -12,6 +12,16 @@ public class Producto implements Comparable<Producto>{
 		super();
 	}
 
+	
+	
+	
+	
+	
+	public Producto(String nombre) {
+		super();
+		this.nombre = nombre;
+	}
+
 	/**
 	 * 
 	 * @param nombre
