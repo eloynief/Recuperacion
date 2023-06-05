@@ -8,6 +8,11 @@ public class Producto implements Comparable<Producto>{
 	protected String nombre = "";
 	protected double precio = 0;
 
+	
+	
+	/**
+	 * constructor por defecto
+	 */
 	public Producto() {
 		super();
 	}
@@ -16,14 +21,17 @@ public class Producto implements Comparable<Producto>{
 	
 	
 	
-	
+	/**
+	 * constructor del producto que solo guarda el nombre
+	 * @param nombre
+	 */
 	public Producto(String nombre) {
 		super();
 		this.nombre = nombre;
 	}
 
 	/**
-	 * 
+	 * constructor del producto para poder generar objetos tipo producto que guarden el nombre y el precio
 	 * @param nombre
 	 * @param precio
 	 */

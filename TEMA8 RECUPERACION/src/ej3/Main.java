@@ -4,7 +4,10 @@ import java.util.Scanner;
 import java.util.TreeSet;
 
 public class Main {
-	
+	/**
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		int opcion=1;
 		Scanner sc=new Scanner(System.in);

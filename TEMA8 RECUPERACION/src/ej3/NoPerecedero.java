@@ -3,12 +3,21 @@ package ej3;
 public class NoPerecedero extends Producto {
 
 	private String tipo = "";
-
+	/**
+	 * 
+	 * @param nombre muestra el nombre del producto
+	 * @param precio del producto no perecedero
+	 */
 	public NoPerecedero(String nombre, double precio) {
 		super(nombre, precio);
 
 	}
-
+	/**
+	 * 
+	 * @param nombre
+	 * @param precio
+	 * @param tipo
+	 */
 	public NoPerecedero(String nombre, double precio, String tipo) {
 		super(nombre, precio);
 
