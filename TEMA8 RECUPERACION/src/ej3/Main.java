@@ -26,8 +26,8 @@ public class Main {
 			System.out.println("Bienvenido a los productos");
 			System.out.println("1. Añadir producto.");
 			System.out.println("2. Listar productos.");
-			System.out.println("3. Modificar producto.");
-			System.out.println("4. Eliminar producto.");
+			System.out.println("3. Eliminar producto.");
+			System.out.println("4. Modificar producto.");
 			System.out.println("5. Guardar en fichero.");
 			System.out.println("0. Salir.");
 			System.out.println();
@@ -88,7 +88,7 @@ public class Main {
 				
 				
 				
-				
+				break;
 				
 				
 			}//c1
@@ -113,9 +113,6 @@ public class Main {
 				producto=new Producto(nombre);
 				
 				//si el producto existe, entonces se borra
-				productos.remove(producto);
-				
-				//si el producto existe, entonces se borra
 				if(productos.remove(producto)) {
 					System.out.println("El producto se ha eliminado correctamente.");
 				}
@@ -126,18 +123,68 @@ public class Main {
 				break;
 			}//c3
 			
+			
 			//modificar producto
 			case 4:{
 				System.out.println("introduce el nombre del producto a modificar: ");
 				
+				//
+				nombre=sc.next();
 				//crea objeto tipo producto del constructor de solo nombre
 				producto=new Producto(nombre);
 				
 				//si está en la lista
-				if(productos.contains(nombre)) {
-					System.out.println("introduce el dato del producto a modificar: ");
+				if(productos.contains(producto)) {
+					for(Producto p: productos) {
+						if(p.equals(producto)) {
+							//
+							System.out.println("introduce el dato del producto a modificar: ");
+							System.out.println("1: Nombre");
+							System.out.println("2: Precio");
+							System.out.println("3: Tipo (Perecedero/No perecedero)");
+							
+							switch(opcion){
+								case 1:{
+									nombre=sc.next();
+									sc.nextLine();
+									p.setNombre(nombre); //sirve para reemplazar valores
+									
+									
+								}//c1
+								
+								case 2:{
+									precio=sc.nextDouble();
+									sc.nextLine();
+									p.setPrecio(precio); //sirve para reemplazar valores
+									
+									
+								}//c2
+								
+								case 3:{
+									
+									if(p instanceof Perecedero) { //ver si es de tipo perecedero
+										
+										Perecedero per=(Perecedero) p; //el objeto creado sera 
+										
+										
+										
+									}
+									
+									
+								}//c3
+							
+							}
+							
+						}
+						
+						
+						
+					}
+					
 					
 				}
+				
+				break;
 			}//c4
 			
 			//guardar en el texto
