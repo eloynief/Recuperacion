@@ -22,8 +22,15 @@ public class Main {
 		String tipoProd="";
 		
 		while(opcion!=0) {
-			
-
+			//menu
+			System.out.println("Bienvenido a los productos");
+			System.out.println("1. Añadir producto.");
+			System.out.println("2. Listar productos.");
+			System.out.println("3. Modificar producto.");
+			System.out.println("4. Eliminar producto.");
+			System.out.println("5. Guardar en fichero.");
+			System.out.println("0. Salir.");
+			System.out.println();
 			System.out.println("introduce la opcion: ");
 			
 			opcion=sc.nextInt();
@@ -32,12 +39,6 @@ public class Main {
 			//
 			case 1:{
 				
-				System.out.println("1. Añadir producto.");
-				System.out.println("2. Listar productos.");
-				System.out.println("3. Modificar producto.");
-				System.out.println("4. Eliminar producto.");
-				System.out.println("5. Guardar en fichero.");
-				System.out.println("0. Salir.");
 
 				
 				System.out.println("introduce el nombre: ");
@@ -62,6 +63,8 @@ public class Main {
 					//
 					producto=new Perecedero(nombre,precio,caducar);
 					
+					//añade el producto
+					productos.add(producto);
 				}
 	
 				//si el producto no es perecedero
@@ -74,21 +77,20 @@ public class Main {
 					//
 					producto=new NoPerecedero(nombre,precio,tipo);
 					
+					//añade el producto
+					productos.add(producto);
 					
 				}
 				else {
+					//si el tipo no es valido no se añade el producto
 					System.out.println("Tipo no valido");
-					break;
 				}
 				
 				
 				
 				
 				
-				//añade el producto
-				productos.add(producto);
 				
-				break;
 			}//c1
 			
 			case 2:{
@@ -136,10 +138,15 @@ public class Main {
 					System.out.println("introduce el dato del producto a modificar: ");
 					
 				}
-				
-				
-				
 			}//c4
+			
+			//guardar en el texto
+			case 5:{
+				
+				
+			}//c5
+			
+			
 			
 			
 			//salir
