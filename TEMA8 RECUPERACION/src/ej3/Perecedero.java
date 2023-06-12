@@ -19,7 +19,7 @@ public class Perecedero extends Producto {
 
 	public int getCaducar() {
 		return caducar;
-	} 
+	}
 
 	public void setCaducar(int caducar) {
 		this.caducar = caducar;
